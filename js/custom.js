@@ -1,0 +1,63 @@
+$(function () {
+
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+        console.log(sct);
+        if (sct > 4) {
+            $('.header').addClass('on')
+        } else {
+            $('.header').removeClass('on')
+        }
+    })
+
+
+    const main_slide = new Swiper('.main_slide', {
+        loop: true,
+        // autoplay: {
+        //     delay: 8000,
+        // },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.next',
+            prevEl: '.prev',
+        },
+    })
+
+    const content_slide = new Swiper('.content_slide', {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination-content',
+            clickable: true,
+        },
+
+
+        navigation: {
+            nextEl: '.content_next',
+            prevEl: '.content_prev',
+        },
+
+    })
+
+
+    $('.to_top button').on('click', function () {
+        $('html, body').animate({ scrollTop: 0, }, 300)
+    });
+
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+        console.log(sct);
+        if (sct > 830) {
+            $('.to_top').addClass('on')
+        } else {
+            $('.to_top').removeClass('on')
+        }
+    })
+
+
+})
