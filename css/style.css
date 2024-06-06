@@ -9,7 +9,6 @@
     right: 0;
     z-index: 99999;
     background: transparent;
-
     transition: 0.3s;
 }
 
@@ -143,11 +142,19 @@
     content: '';
     position: absolute;
     inset: 0 0 0 0;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .main_visual .main_slide .itm04 {
+    position: relative;
     background: url(../images/main_visual04.jpg)no-repeat center center;
+}
+
+.main_visual .main_slide .itm04::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 0;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .main_visual .main_slide .itm .slg {
