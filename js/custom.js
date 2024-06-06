@@ -13,9 +13,13 @@ $(function () {
 
     const main_slide = new Swiper('.main_slide', {
         loop: true,
-        // autoplay: {
-        //     delay: 8000,
-        // },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        autoplay: {
+            delay: 6000,
+        },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -52,7 +56,7 @@ $(function () {
     $(window).on('scroll', function () {
         let sct = $(window).scrollTop();
         console.log(sct);
-        if (sct > 830) {
+        if (sct > 800) {
             $('.to_top').addClass('on')
         } else {
             $('.to_top').removeClass('on')
