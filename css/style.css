@@ -77,7 +77,6 @@
 
     visibility: hidden;
 
-    border: 1px solid #999;
     color: #000;
     background: #fff;
 }
@@ -92,7 +91,7 @@
     display: block;
     line-height: 40px;
     text-align: center;
-    border: 1px solid #999;
+    border: 1px solid #ddd;
 }
 
 .header .inner .util {
@@ -338,9 +337,16 @@
     transform: translate(-50%, 0);
 }
 
+
 .main_content .inner .itm .ord a {
     border: 1px solid #ddd;
-    padding: 7px 51px;
+    padding: 7px 48px;
+    transition: 0.5s;
+}
+
+.main_content .inner .itm .ord a:hover {
+    transition: 0.5s;
+    background: #ddd;
 }
 
 .main_content .arrows {
