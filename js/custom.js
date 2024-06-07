@@ -48,6 +48,14 @@ $(function () {
 
     })
 
+    const sub_content_slide = new Swiper('.sub_content_slide', {
+        loop: true,
+        navigation: {
+            nextEl: '.sub_content_next',
+            prevEl: '.sub_content_prev',
+        },
+    })
+
 
     $('.to_top button').on('click', function () {
         $('html, body').animate({ scrollTop: 0, }, 300)
